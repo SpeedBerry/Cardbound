@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-# CARDBOUND
+![Cardbound Logo](https://github.com/SpeedBerry/Cardbound/images/Logo.png?raw=true)
 
   <p align="center">
     An educational game that abstracts learning by using fun!
@@ -12,14 +12,19 @@
     <a href="https://repo.csd.uwo.ca/projects/COMPSCI2212_W2024/repos/group40/browse"><strong>Bitbucket</strong></a>
     <br />
     <br />
-    <a href="https://example.com">Link 1</a>
-    ·
-    <a href="https://example.com">Report Bug</a>
-    ·
-    <a href="https://example.com">Link 2</a>
   </p>
 </div>
 
+
+<details>
+	<summary>Gameplay Images</summary>
+	![Main Menu Image](https://github.com/SpeedBerry/Cardbound/images/MainMenu.png?raw=true)
+	The main menu in Cardbound.
+	![Gameplay Image](https://github.com/SpeedBerry/Cardbound/images/Gameplay.png?raw=true)
+	What the gameplay of Cardbound looks like.
+	![Game Over Image](https://github.com/SpeedBerry/Cardbound/images/GameOver.png?raw=true)
+	How the game over screen in Cardbound looks.
+</details>
 
 
 <!-- TABLE OF CONTENTS -->
