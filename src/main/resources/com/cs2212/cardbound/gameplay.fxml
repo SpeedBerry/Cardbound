@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import com.cs2212.cardbound.gameplay.Card?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs2212.cardbound.system.GameplayController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" StackPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="pauseButton" fitHeight="64.0" fitWidth="64.0" layoutX="1212.0" layoutY="14.0" onMouseClicked="#pauseGame" onMouseEntered="#hoverEnterImageButton" onMouseExited="#hoverExitImageButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/pause_button.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="6.0" radius="2.5" spread="1.0" width="6.0">
+                     <color>
+                        <Color red="0.2368421107530594" green="0.2368421107530594" blue="0.2368421107530594" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Pane fx:id="attackButton" layoutX="20.0" layoutY="371.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="160.0">
+               <children>
+                  <ProgressBar prefHeight="39.0" prefWidth="160.0" progress="0.0" style="-fx: #000000;" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="39.0" stroke="#ababab" strokeType="INSIDE" width="160.0">
+                     <effect>
+                        <InnerShadow height="64.0" radius="20.75">
+                           <color>
+                              <Color red="0.5394737124443054" green="0.5394737124443054" blue="0.5394737124443054" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </Rectangle>
+                  <Rectangle fx:id="attackBar" arcHeight="5.0" arcWidth="5.0" fill="#46a1f5" height="33.0" layoutX="3.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="79.0" />
+                  <Label id="agencyFont" fx:id="attackText" layoutX="44.0" layoutY="9.0" text="A T T A C K !" textFill="#1b1b1b">
+                     <font>
+                        <Font name="Agency FB Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label id="agencyFont" fx:id="levelTimerLabel" alignment="CENTER" layoutX="589.0" layoutY="4.0" prefHeight="79.0" prefWidth="102.0" text="1:00" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB Bold" size="64.0" />
+               </font>
+               <effect>
+                  <DropShadow height="8.0" radius="3.5" spread="1.0" width="8.0" />
+               </effect>
+            </Label>
+            <Pane fx:id="battlePane" layoutX="240.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="232.0" prefWidth="800.0">
+               <children>
+                  <ImageView fx:id="playerSprite" fitHeight="231.0" fitWidth="226.0" layoutX="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/player/player_idle.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="enemySprite" fitHeight="150.0" fitWidth="200.0" layoutX="580.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/enemy/enemy_idle.png" />
+                     </image>
+                  </ImageView>
+                  <Pane fx:id="enemyHealthPane" layoutX="585.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="160.0">
+                     <children>
+                        <Rectangle fx:id="enemyHealthBarBackground" arcHeight="20.0" arcWidth="10.0" height="11.0" layoutX="16.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="128.0" />
+                        <Rectangle fx:id="enemyHealthBar" arcHeight="20.0" arcWidth="8.0" fill="#d71f1f" height="9.0" layoutX="17.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="126.0" />
+                        <Label id="agencyFont" fx:id="enemyHealthLabel" alignment="CENTER" contentDisplay="RIGHT" layoutX="16.0" layoutY="18.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="128.0" text="0 HP" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="2.0" radius="0.5" spread="1.0" width="2.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="playerHealthPane" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="48.0" prefWidth="173.0">
+               <children>
+                  <ImageView fx:id="heartContainer1" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/full_heart.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" spread="1.0" width="8.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="heartContainer2" fitHeight="48.0" fitWidth="48.0" layoutX="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/full_heart.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" spread="1.0" width="8.0" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="heartContainer3" fitHeight="48.0" fitWidth="48.0" layoutX="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/full_heart.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" spread="1.0" width="8.0" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="statisticsPane" layoutX="1000.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="96.0" prefWidth="200.0">
+               <children>
+                  <Label id="agencyFont" text="SCORE: " textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" fx:id="currentScore" layoutX="101.0" text="0000" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" layoutY="30.0" text="LEVEL: " textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" fx:id="currentLevel" layoutX="101.0" layoutY="30.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" fx:id="runTimerLabel" layoutY="60.0" text="RUN TIMER: " textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" fx:id="runTimerValue" layoutX="101.0" layoutY="60.0" text="00'00&quot;00" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="cardsPane" layoutY="432.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="288.0" prefWidth="1280.0">
+               <children>
+                  <ImageView fitHeight="288.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/card_background.png" />
+                     </image>
+                  </ImageView>
+                  <Card fx:id="card0" scaleX="0.85" scaleY="0.85"/>
+                  <Card fx:id="card1" scaleX="0.85" scaleY="0.85"/>
+                  <Card fx:id="card2" scaleX="0.85" scaleY="0.85"/>
+                  <Card fx:id="card3" scaleX="0.85" scaleY="0.85"/>
+               </children>
+            </Pane>
+            <Rectangle fx:id="darkenBackground" fill="#00000065" height="720.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="1280.0" />
+            <Pane fx:id="retryPane" prefHeight="720.0" prefWidth="1280.0" visible="false">
+               <children>
+                  <ImageView fx:id="playerDown" fitHeight="231.0" fitWidth="226.0" layoutX="300.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@sprites/player/player_downed.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="retryMessage" alignment="CENTER" layoutX="302.0" layoutY="70.0" prefHeight="115.0" prefWidth="677.0" text="Fate is unkind...&#10;Turn back time and try again?" textAlignment="CENTER" textFill="#585858" visible="false" wrapText="true">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="36.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="6.0" radius="2.0" spread="1.0" width="4.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+                  <Label id="arialRounded" fx:id="retryButton" alignment="CENTER" layoutX="564.0" layoutY="276.0" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="RETRY" textAlignment="CENTER" textFill="#585858" visible="false">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+                  <Label id="arialRounded" fx:id="abandonRunButton" alignment="CENTER" layoutX="560.0" layoutY="357.0" onMouseClicked="#showResults" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="28.0" prefWidth="160.0" text="ABANDON RUN" textAlignment="CENTER" textFill="#585858" visible="false">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Rectangle fx:id="whiteOut" fill="WHITE" height="720.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="1280.0" />
+            <Pane fx:id="victoryScreen" prefHeight="720.0" prefWidth="1280.0" visible="false">
+               <children>
+                  <Label id="agencyFont" fx:id="levelClearedText" alignment="CENTER" layoutX="302.0" layoutY="102.0" prefHeight="70.0" prefWidth="677.0" text="LEVEL CLEARED" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" spread="1.0" width="8.0" />
+                     </effect>
+                  </Label>
+                  <Label id="agencyFont" fx:id="victoryPoints" alignment="CENTER" layoutX="483.0" layoutY="306.0" prefHeight="44.0" prefWidth="315.0" text="+ X POINTS" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="6.0" radius="2.5" spread="1.0" width="6.0" />
+                     </effect>
+                  </Label>
+                  <ImageView fx:id="continueButton" fitHeight="108.0" fitWidth="279.0" layoutX="509.0" layoutY="473.0" onMouseEntered="#hoverEnterImageButton" onMouseExited="#hoverExitImageButton" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@sprites/next_level_button.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pauseMenu" layoutX="400.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="480.0" visible="false">
+               <children>
+                  <Rectangle fx:id="pauseMenuContainer" arcHeight="5.0" arcWidth="5.0" fill="#000000d9" height="540.0" stroke="BLACK" strokeType="INSIDE" width="480.0" />
+                  <Text fx:id="gamePaused" fill="WHITE" layoutX="71.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GAME PAUSED">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Text>
+                  <Label id="arialRounded" fx:id="resumeButton" alignment="CENTER" layoutX="164.0" layoutY="155.0" onMouseClicked="#resumeGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="RESUME" textAlignment="CENTER" textFill="#585858">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label id="arialRounded" fx:id="pauseRestartButton" alignment="CENTER" layoutX="164.0" layoutY="249.0" onMouseClicked="#restartGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="RESTART" textAlignment="CENTER" textFill="#585858">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label id="arialRounded" fx:id="pauseMainMenuButton" alignment="CENTER" layoutX="33.0" layoutY="344.0" onMouseClicked="#returnToMainMenu" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="414.0" text="SAVE &amp; RETURN TO MENU" textAlignment="CENTER" textFill="#585858">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label id="arialRounded" fx:id="pauseExitButton" alignment="CENTER" layoutX="146.0" layoutY="436.0" onMouseClicked="#exitGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="190.0" text="SAVE &amp; EXIT" textAlignment="CENTER" textFill="#585858">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="resultsScreen" prefHeight="720.0" prefWidth="1280.0" visible="false">
+               <children>
+                  <Rectangle fill="#000000d9" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+                  <Text fill="WHITE" layoutX="527.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU DIED">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Text>
+                  <Line endX="160.0" layoutX="610.0" layoutY="153.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND" strokeWidth="2.0" />
+                  <Pane layoutX="400.0" layoutY="161.0" prefHeight="505.0" prefWidth="480.0">
+                     <children>
+                        <Label id="agencyFont" fx:id="resultScoreLabel" layoutX="82.0" layoutY="25.0" text="Score:" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultScoreValue" alignment="CENTER_RIGHT" layoutX="296.0" layoutY="25.0" prefHeight="44.0" prefWidth="102.0" text="0000" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultLevelsClearedLabel" layoutX="109.0" layoutY="130.0" text="Levels Cleared:" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultLevelsClearedValue" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="130.0" prefHeight="29.0" prefWidth="45.0" text="0" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultTimeSpentLabel" layoutX="109.0" layoutY="181.0" text="Time Spent:" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultTimeSpentValue" alignment="CENTER_RIGHT" layoutX="285.0" layoutY="181.0" prefHeight="29.0" prefWidth="85.0" text="00:00:00" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultBossesDefeatedLabel" layoutX="109.0" layoutY="232.0" text="Bosses Defeated:" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label id="agencyFont" fx:id="resultBossesDefeatedValue" alignment="CENTER_RIGHT" layoutX="325.0" layoutY="232.0" prefHeight="29.0" prefWidth="45.0" text="0" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="24.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="resultButtons" layoutX="109.0" layoutY="331.0" prefHeight="144.0" prefWidth="262.0" visible="false">
+                           <children>
+                              <Label id="arialRounded" fx:id="resultRestartButton" alignment="CENTER" layoutX="55.0" onMouseClicked="#restartGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="RESTART" textAlignment="CENTER" textFill="#585858">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="30.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label id="arialRounded" fx:id="resultMainMenuButton" alignment="CENTER" layoutY="51.0" onMouseClicked="#returnToMainMenu" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="262.0" text="RETURN TO MAIN MENU" textAlignment="CENTER" textFill="#585858">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label id="arialRounded" fx:id="resultExitButton" alignment="CENTER" layoutX="66.0" layoutY="102.0" onMouseClicked="#exitGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="130.0" text="EXIT GAME" textAlignment="CENTER" textFill="#585858">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <TitledPane fx:id="debugMenu" layoutX="1054.0" layoutY="411.0" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="309.0" prefWidth="226.0" text="Debug Menu" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="224.0">
+                     <children>
+                        <Button fx:id="debugSave" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Save Game" />
+                        <Button fx:id="debugLoad" layoutX="13.0" layoutY="49.0" mnemonicParsing="false" text="Load Game" />
+                        <Button fx:id="debugResults" layoutX="13.0" layoutY="84.0" mnemonicParsing="false" prefWidth="77.0" text="Results" />
+                        <Button fx:id="debugExit" layoutX="133.0" layoutY="244.0" mnemonicParsing="false" prefWidth="77.0" text="Exit debug" />
+                        <Button fx:id="set720p" layoutX="133.0" layoutY="14.0" mnemonicParsing="false" prefWidth="77.0" text="Set 720p" />
+                        <Button fx:id="set1080p" layoutX="133.0" layoutY="49.0" mnemonicParsing="false" prefWidth="77.0" text="Set 1080p" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

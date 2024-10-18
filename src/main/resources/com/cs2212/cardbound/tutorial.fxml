@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs2212.cardbound.system.TutorialController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" StackPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/backgrounds/sub_menu_background.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#595959" height="405.0" layoutX="280.0" layoutY="138.0" stroke="#606060" strokeType="OUTSIDE" strokeWidth="8.0" width="720.0" />
+            <ImageView fx:id="tutorialImage" fitHeight="405.0" fitWidth="720.0" layoutX="280.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/tutorial/tutorial_slide1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="backButton" alignment="CENTER" layoutX="564.0" layoutY="628.0" prefHeight="42.0" prefWidth="152.0" text="BACK" textAlignment="CENTER" textFill="#b5b5b5">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="517.0" layoutY="65.0" text="HOW TO PLAY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="leftArrow" disable="true" fitHeight="64.0" fitWidth="64.0" layoutX="280.0" layoutY="575.0" onMouseClicked="#clickLeftArrow" onMouseEntered="#hoverEnterArrow" onMouseExited="#hoverExitArrow" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/tutorial/left_arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="rightArrow" fitHeight="64.0" fitWidth="64.0" layoutX="936.0" layoutY="575.0" onMouseClicked="#clickRightArrow" onMouseEntered="#hoverEnterArrow" onMouseExited="#hoverExitArrow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/tutorial/right_arrow.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="slideNumbers" layoutX="280.0" layoutY="102.0" prefHeight="28.0" prefWidth="78.0" text="X/10" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="slideDescription" alignment="CENTER" layoutX="376.0" layoutY="557.0" prefHeight="80.0" prefWidth="530.0" text="Descriptive slide text" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" prefWidth="232.0" type="Pane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <Rectangle fx:id="cardBorder" arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="300.0" layoutX="6.0" layoutY="6.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" width="220.0" />
+   <Line fx:id="cardDiv" endX="109.0" layoutX="116.0" layoutY="130.0" startX="-109.0" startY="1.5" strokeWidth="2.0" />
+   <ImageView id="cardImage" fx:id="cardImage" fitHeight="124.0" fitWidth="220.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="cardTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="141.0" prefHeight="30.0" prefWidth="216.0" text="Title" textAlignment="CENTER">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Line fx:id="cardTitleUnderline" endX="90.0" layoutX="116.0" layoutY="169.0" startX="-90.0" />
+   <Label fx:id="cardDesc" alignment="TOP_CENTER" layoutX="17.0" layoutY="179.0" prefHeight="88.0" prefWidth="198.0" text="Description" textAlignment="CENTER" wrapText="true" />
+   <Label fx:id="cardType" layoutX="32.0" layoutY="285.0" prefHeight="15.0" prefWidth="83.0" text="Label">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+   <ImageView fx:id="typeIcon" fitHeight="16.0" fitWidth="16.0" layoutX="13.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" />
+   <Pane fx:id="cardSelection" prefHeight="306.0" prefWidth="233.0" visible="false">
+      <children>
+         <Rectangle fx:id="cardBorder1" arcHeight="36.0" arcWidth="36.0" fill="#00000058" height="312.0" stroke="TRANSPARENT" strokeType="OUTSIDE" strokeWidth="0.0" width="232.0" />
+         <ImageView fx:id="cardSelectionIcon" fitHeight="128.0" fitWidth="128.0" layoutX="46.0" layoutY="86.0" opacity="0.85" pickOnBounds="true" preserveRatio="true" />
+      </children>
+   </Pane>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</fx:root>

@@ -1,0 +1,76 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Cardbound:jar">
+    <output-path>$PROJECT_DIR$/jar</output-path>
+    <root id="archive" name="ProjectMC.main.jar">
+      <element id="module-output" name="ProjectMC.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21-ea+5/a927194a0111d643b286e0ebe8bb03ceebd0c13e/javafx-base-21-ea+5-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/21-ea+5/220806832763ac56d7a68675a63a42204aaa21bb/javafx-fxml-21-ea+5-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21-ea+5/41a013f54a8de958b292b6ade9b9a8385aa6989/javafx-controls-21-ea+5-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-media/21-ea+5/1369270ddc924d2b5e86152ec911ce14f00da02c/javafx-media-21-ea+5-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/21-ea+5/b6f670a56cad4335d158438d3e8cf2af4da2a451/javafx-controls-21-ea+5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21-ea+5/69e2a4f08fa5de3afc584c72ee21f2292211f897/javafx-graphics-21-ea+5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/21-ea+5/6a11f67bec70b0fcef1c9cd573f370fc6c20c83c/javafx-base-21-ea+5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/21-ea+5/b237633678405b4731799bd388d6e41dca77e121/javafx-graphics-21-ea+5-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10.1/b3add478d4382b78ea20b1671390a858002feb6c/gson-2.10.1.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-console-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-console-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-datetime-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-debug-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-errorhandling-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-file-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-file-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-file-l2-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-handle-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-interlocked-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-libraryloader-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-localization-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-memory-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-namedpipe-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-processenvironment-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-processthreads-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-processthreads-l1-1-1.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-profile-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-string-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-synch-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-synch-l1-2-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-sysinfo-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-timezone-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-core-util-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-conio-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-convert-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-environment-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-filesystem-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-heap-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-locale-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-math-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-multibyte-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-private-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-process-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-string-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-time-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/api-ms-win-crt-utility-l1-1-0.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/decora_sse.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/fxplugins.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/glass.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/glib-lite.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/gstreamer-lite.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/javafx_font.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/javafx_iio.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/jfxmedia.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/jfxwebkit.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/msvcp140.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/msvcp140_1.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/msvcp140_2.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/prism_common.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/prism_d3d.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/prism_sw.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/ucrtbase.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/vcruntime140.dll" />
+      <element id="file-copy" path="$PROJECT_DIR$/../javafx-sdk-21.0.2/bin/vcruntime140_1.dll" />
+    </root>
+  </artifact>
+</component>

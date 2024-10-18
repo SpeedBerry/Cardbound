@@ -1,0 +1,14 @@
+Granny's Cane, Bonk the enemy's head with granny's cane and deal ? damage. Yeah. That's it., attack, grannys_cane.png, 20, 1
+Eat Fresh, Slap your enemy with a fiery sub dealing ? damage., attack, eat_fresh.png, 5, 1
+Sword Barrage, Attack the enemy with a flurry of slices dealing ? damage 6 times., attack, sword_barrage.png, 1, 6
+Fish Flapper, Slap the enemy with a mud-skipper dealing a devastating ? damage., attack, fish_flapper.png, 2, 1
+Gatling Gun, Deal 25% of ? damage 5 times., attack, gatling_gun.png, 4, 5
+Burning Demon Slash, Inherit the power of a demon dealing ? damage., attack, burning_demon_slash.png, 25, 1
+Fire Storm, Deal ? damage 10 times., attack, fire_storm.png, 2, 10
+Modulo Missile, All your attacks deal extra damage equal to the attack's damage modulo 3, modifier, magical_missile.png, x%3+x, -1
+Double Up, Double your next attack's damage., modifier, double_up.png, 2*x, 1
+Valhalla's Gate, Spawn a swarm of 20 archers. Each one deals an additional 10% of your next attack's damage., modifier, valhallas_gate.png, 2*x+x, 1
+Heaven's Nectar, Ah yes! Rejuvenation! Buff next attack by an extra 50%, modifier, heavens_nectar.png, 1.5*x, 1
+Surf Up, That's so gnarly bro! Unleash a tidal wave that empowers your next 2 attacks by 50%, modifier, surf_up.png, 1.5*x, 2
+Buff Up, All your attacks deal an extra 3 damage., modifier, buff_up.png, x+3, -1
+Critical Slice, Your next attack deals 500% damage., modifier, critical_slice.png, 4*x, 1

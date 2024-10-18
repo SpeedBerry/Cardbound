@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.cs2212.cardbound","l":"com.cs2212.cardbound"},{"m":"com.cs2212.cardbound","l":"com.cs2212.cardbound.gameplay"},{"m":"com.cs2212.cardbound","l":"com.cs2212.cardbound.system"}];updateSearchResults();

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="2160.0" maxWidth="3840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cs2212.cardbound.system.MainMenuController">
+    <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" StackPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@sprites/backgrounds/menu_background.png" />
+               </image>
+            </ImageView>
+              <Pane fx:id="mainMenuPane" layoutX="540.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="380.0" prefWidth="200.0">
+                  <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000003f" height="380.0" stroke="#f0b73cb3" strokeType="OUTSIDE" strokeWidth="6.0" width="200.0" />
+                      <Label fx:id="newGameButton" alignment="CENTER" layoutX="24.0" layoutY="20.0" onMouseClicked="#newGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="NEW GAME" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                      <Label fx:id="loadGameButton" alignment="CENTER" layoutX="24.0" layoutY="80.0" onMouseClicked="#loadGame" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="LOAD GAME" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                      <Label fx:id="tutorialButton" alignment="CENTER" layoutX="24.0" layoutY="140.0" onMouseClicked="#tutorial" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="TUTORIAL" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                      <Label fx:id="leaderboardButton" alignment="CENTER" layoutX="-14.0" layoutY="200.0" onMouseClicked="#leaderboard" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="228.0" text="LEADERBOARDS" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                      <Label fx:id="settingsButton" alignment="CENTER" layoutX="24.0" layoutY="260.0" onMouseClicked="#settings" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="152.0" text="SETTINGS" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                      <Label fx:id="exitButton" alignment="CENTER" layoutX="60.0" layoutY="320.0" onMouseClicked="#exit" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="42.0" prefWidth="80.0" text="EXIT" textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="Agency FB Bold" size="28.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Label>
+                  </children>
+              </Pane>
+              <Button fx:id="instructorMode" layoutX="25.0" layoutY="645.0" mnemonicParsing="false" onAction="#instructorMode" prefHeight="50.0" prefWidth="180.0" text="Instructor Mode">
+                  <font>
+                      <Font name="System Bold Italic" size="18.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </Button>
+            <ImageView fitHeight="110.0" fitWidth="476.0" layoutX="403.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sprites/CARDBOUND.png" />
+               </image>
+            </ImageView>
+              <Text layoutX="416.0" layoutY="667.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Group 40: Jacob Couture, Abhinav Bhati, Tina To Huong Tang&#10;Ritvik Menon, and Pranav Arora for CS2212 at Western University" textAlignment="CENTER">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </Text>
+              <Label fx:id="startGameButton" alignment="CENTER" layoutX="480.0" layoutY="321.0" onMouseClicked="#showLogin" onMouseEntered="#hoverEnterButton" onMouseExited="#hoverExitButton" prefHeight="79.0" prefWidth="323.0" text="START GAME" textFill="WHITE" visible="false">
+                  <font>
+                      <Font name="Agency FB Bold" size="64.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </Label>
+              <TitledPane fx:id="debugMenu" layoutX="1058.0" layoutY="411.0" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="309.0" prefWidth="222.0" text="Debug Menu">
+                  <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="224.0">
+                          <children>
+                              <Button fx:id="debugSave" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Save Game" />
+                              <Button fx:id="debugLoad" layoutX="13.0" layoutY="49.0" mnemonicParsing="false" text="Load Game" />
+                              <Button layoutX="133.0" layoutY="244.0" mnemonicParsing="false" onAction="#toggleDebugWindow" prefWidth="77.0" text="Exit debug" />
+                              <Button fx:id="set720p" layoutX="133.0" layoutY="14.0" mnemonicParsing="false" prefWidth="77.0" text="Set 720p" />
+                              <Button fx:id="set1080p" layoutX="133.0" layoutY="49.0" mnemonicParsing="false" prefWidth="77.0" text="Set 1080p" />
+                              <Button fx:id="toggleInstructorMode" layoutX="13.0" layoutY="84.0" mnemonicParsing="false" onAction="#toggleInstructorMode" prefWidth="77.0" text="Instructor" />
+                          </children>
+                      </AnchorPane>
+                  </content>
+              </TitledPane>
+              <Rectangle fx:id="darkenBackground" arcHeight="5.0" arcWidth="5.0" fill="#00000066" height="720.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="1280.0" />
+              <StackPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false">
+                  <children>
+                      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="360.0" prefWidth="640.0">
+                          <children>
+                        <ImageView fitHeight="360.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sprites/login_background.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="184.0" layoutY="31.0" text="LOGIN TO CARDBOUND">
+                                  <font>
+                                      <Font name="System Bold" size="24.0" />
+                                  </font>
+                                  <cursor>
+                                      <Cursor fx:constant="HAND" />
+                                  </cursor>
+                              </Label>
+                              <Line endX="140.0" layoutX="320.0" layoutY="66.0" startX="-140.0" />
+                              <ImageView fitHeight="192.0" fitWidth="192.0" layoutX="17.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@sprites/login_person_icon.png" />
+                                  </image>
+                              </ImageView>
+                              <TextField fx:id="usernameField" layoutX="320.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" />
+                              <TextField fx:id="shownPasswordField" layoutX="320.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" visible="false" />
+                              <PasswordField fx:id="hiddenPasswordField" layoutX="320.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" />
+                              <CheckBox fx:id="passwordVisible" layoutX="571.0" layoutY="197.0" mnemonicParsing="false" />
+                              <Label layoutX="226.0" layoutY="143.0" text="Username:">
+                                  <font>
+                                      <Font size="18.0" />
+                                  </font>
+                              </Label>
+                              <Label layoutX="226.0" layoutY="192.0" text="Password:">
+                                  <font>
+                                      <Font size="18.0" />
+                                  </font>
+                              </Label>
+                              <Button fx:id="loginButton" layoutX="320.0" layoutY="244.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="96.0" text="Login" />
+                              <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="574.0" layoutY="22.0" onMouseClicked="#closeLogin" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@sprites/X_icon.png" />
+                                  </image>
+                              </ImageView>
+                              <Label fx:id="invalidLogin" layoutX="320.0" layoutY="116.0" text="Invalid username or password." textFill="#eb0000">
+                                  <font>
+                                      <Font size="14.0" />
+                                  </font>
+                        </Label>
+                              <Button fx:id="newUser" layoutX="442.0" layoutY="244.0" mnemonicParsing="false" onAction="#showCreateNewUser" prefHeight="32.0" prefWidth="96.0" text="Create User" />
+                          </children>
+                      </Pane>
+                  </children>
+              </StackPane>
+              <Pane fx:id="newGameWarning" layoutX="387.0" layoutY="242.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="236.0" prefWidth="506.0" visible="false">
+                  <children>
+                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000d9" height="236.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
+                      <Label layoutX="134.0" layoutY="14.0" text="WARNING" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="48.0" />
+                          </font>
+                      </Label>
+                      <Label layoutX="76.0" layoutY="86.0" text="Are you sure you want to start a new run?&#10;Your previously saved run will be lost." textAlignment="CENTER" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="18.0" />
+                          </font>
+                      </Label>
+                      <Button fx:id="newGameConfirm" layoutX="309.0" layoutY="160.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="128.0" text="CONFIRM">
+                          <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="newGameCancel" layoutX="70.0" layoutY="160.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="128.0" text="CANCEL">
+                          <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                          </font>
+                      </Button>
+                  </children>
+              </Pane>
+                <Pane fx:id="createUserPane" layoutX="320.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" visible="false">
+                    <children>
+                  <ImageView fitHeight="360.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/login_background.png" />
+                     </image>
+                  </ImageView>
+                        <Label layoutX="212.0" layoutY="31.0" text="CREATE NEW USER" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                        <Line endX="89.0" layoutX="345.0" layoutY="66.0" startX="-140.0" />
+                        <ImageView fitHeight="192.0" fitWidth="192.0" layoutX="17.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@sprites/login_person_icon.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="usernameField1" layoutX="320.0" layoutY="144.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" />
+                        <TextField fx:id="shownPasswordField1" layoutX="320.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" visible="false" />
+                        <PasswordField fx:id="hiddenPasswordField1" layoutX="320.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" />
+                        <CheckBox fx:id="passwordVisible1" layoutX="571.0" layoutY="197.0" mnemonicParsing="false" />
+                        <Label layoutX="226.0" layoutY="143.0" text="Username:">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="226.0" layoutY="192.0" text="Password:">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="createButton" layoutX="320.0" layoutY="244.0" mnemonicParsing="false" onAction="#createNewUser" prefHeight="32.0" prefWidth="96.0" text="Create" />
+                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="574.0" layoutY="22.0" onMouseClicked="#closeUser" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@sprites/X_icon.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="invalidCreate" layoutX="320.0" layoutY="120.0" text="Username/password must not be empty!" textFill="#eb0000">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+         </children>
+      </Pane>
+    </children>
+</StackPane>
