@@ -16,17 +16,6 @@
 </div>
 
 
-<details>
-	<summary>Gameplay Images</summary>
-	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true" alt="Main Menu Image">
-	The main menu in Cardbound. <br /> <br />
-	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/Gameplay.png?raw=true" alt="Gameplay Image">
-	What the gameplay of Cardbound looks like. <br /> <br />
-	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/GameOver.png?raw=true" alt="Game Over Image">
-	How the game over screen in Cardbound looks. <br /> <br />
-</details>
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -37,6 +26,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+	<li><a href="#images">Images</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -84,6 +74,22 @@ This project aims to collide the worlds of math and gaming to create an explosio
 
 <p align="right">(<a href="#cardbound">back to top</a>)</p>
 
+
+
+<!-- IMAGES -->
+## Images
+
+<details>
+	<summary>Gameplay Images</summary>
+	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true" alt="Main Menu Image">
+	The main menu in Cardbound. <br /> <br />
+	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/Gameplay.png?raw=true" alt="Gameplay Image">
+	What the gameplay of Cardbound looks like. <br /> <br />
+	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/GameOver.png?raw=true" alt="Game Over Image">
+	How the game over screen in Cardbound looks. <br /> <br />
+</details>
+
+<p align="right">(<a href="#cardbound">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
