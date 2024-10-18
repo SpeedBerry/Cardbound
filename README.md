@@ -18,12 +18,12 @@
 
 <details>
 	<summary>Gameplay Images</summary>
-	![Main Menu Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true)
-	The main menu in Cardbound.
-	![Gameplay Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/Gameplay.png?raw=true)
-	What the gameplay of Cardbound looks like.
-	![Game Over Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/GameOver.png?raw=true)
-	How the game over screen in Cardbound looks.
+	![Main Menu Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true) <br />
+	The main menu in Cardbound. <br />
+	![Gameplay Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/Gameplay.png?raw=true) <br />
+	What the gameplay of Cardbound looks like. <br />
+	![Game Over Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/GameOver.png?raw=true) <br />
+	How the game over screen in Cardbound looks. <br />
 </details>
 
 
