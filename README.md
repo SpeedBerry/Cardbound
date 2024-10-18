@@ -18,7 +18,7 @@
 
 <details>
 	<summary>Gameplay Images</summary>
-	![Main Menu Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true) <br />
+	<img src="https://github.com/SpeedBerry/Cardbound/blob/main/images/MainMenu.png?raw=true" alt="Main Menu Image">
 	The main menu in Cardbound. <br />
 	![Gameplay Image](https://github.com/SpeedBerry/Cardbound/blob/main/images/Gameplay.png?raw=true) <br />
 	What the gameplay of Cardbound looks like. <br />
