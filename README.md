@@ -4,7 +4,7 @@
 <br />
 <div align="center">
 
-![Cardbound Logo](https://github.com/SpeedBerry/Cardbound/images/Logo.png?raw=true)
+[Cardbound Logo](images/Logo.png)
 
   <p align="center">
     An educational game that abstracts learning by using fun!
@@ -18,11 +18,11 @@
 
 <details>
 	<summary>Gameplay Images</summary>
-	![Main Menu Image](https://github.com/SpeedBerry/Cardbound/images/MainMenu.png?raw=true)
+	[Main Menu Image](images/MainMenu.png)
 	The main menu in Cardbound.
-	![Gameplay Image](https://github.com/SpeedBerry/Cardbound/images/Gameplay.png?raw=true)
+	[Gameplay Image](images/Gameplay.png)
 	What the gameplay of Cardbound looks like.
-	![Game Over Image](https://github.com/SpeedBerry/Cardbound/images/GameOver.png?raw=true)
+	[Game Over Image](images/GameOver.png)
 	How the game over screen in Cardbound looks.
 </details>
 
