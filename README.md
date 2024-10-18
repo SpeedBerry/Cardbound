@@ -9,7 +9,7 @@
   <p align="center">
     An educational game that abstracts learning by using fun!
     <br />
-    <a href="https://repo.csd.uwo.ca/projects/COMPSCI2212_W2024/repos/group40/browse"><strong>Bitbucket</strong></a>
+    <a href="https://youtu.be/uRgfwBTktKs"><strong>Video Demo</strong></a>
     <br />
     <br />
   </p>
